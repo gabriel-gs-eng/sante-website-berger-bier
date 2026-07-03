@@ -22,6 +22,48 @@ export function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+export function ChevronIcon({
+  direction,
+  ...props
+}: { direction: "left" | "right" } & React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+      {...props}
+      className={`${direction === "right" ? "rotate-180" : ""} ${props.className ?? ""}`}
+    >
+      <path
+        d="M15 5l-7 7 7 7"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function BeerGlassIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M14 8h16l-1.6 30.4A3 3 0 0 1 25.4 41H18.6a3 3 0 0 1-3-2.6L14 8Z"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+      <path d="M15 15h14" stroke="currentColor" strokeWidth="2" />
+      <path
+        d="M30 17c4-1 6.5 3.5 3 6-2 1.5-4 1-4.6 0"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
 export function GoogleIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>

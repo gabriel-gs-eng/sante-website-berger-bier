@@ -37,3 +37,12 @@ body {
   color: var(--color-cream);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

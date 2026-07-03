@@ -1,5 +1,6 @@
 import AgeGate from "@/components/AgeGate";
 import Hero from "@/components/Hero";
+import Products from "@/components/Products";
 import About from "@/components/About";
 import Beers from "@/components/Beers";
 import Pairings from "@/components/Pairings";
@@ -12,6 +13,7 @@ export default function Home() {
       <AgeGate />
       <main className="flex flex-1 flex-col">
         <Hero />
+        <Products />
         <About />
         <Beers />
         <Pairings />

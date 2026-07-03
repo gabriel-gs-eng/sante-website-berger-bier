@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "bergerbier:age-verified";
@@ -35,9 +36,14 @@ export default function AgeGate() {
 
       {status === "asking" && (
         <div className="relative flex w-full max-w-sm flex-col items-center gap-8 sm:max-w-md">
-          <span className="font-display text-3xl uppercase tracking-wide text-amber sm:text-4xl">
-            Berger Bier
-          </span>
+          <Image
+            src="/brand/logo.webp"
+            alt="Berger Bier — Cervejaria Artesanal"
+            width={317}
+            height={175}
+            priority
+            className="h-20 w-auto sm:h-24"
+          />
           <div className="flex flex-col items-center gap-3">
             <p className="font-display text-2xl uppercase text-cream sm:text-3xl">
               Você tem mais de 18 anos?
