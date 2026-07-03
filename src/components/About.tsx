@@ -1,10 +1,20 @@
-import Image from "next/image";
-
 export default function About() {
   return (
     <section id="historia" className="bg-bark px-6 py-20 sm:px-8 sm:py-28">
-      <div className="mx-auto max-w-6xl border border-crimson/60 p-8 sm:p-14">
-        <div className="grid gap-14 lg:grid-cols-[1.1fr_1fr] lg:items-stretch">
+      <div className="relative mx-auto max-w-6xl overflow-hidden border border-crimson/60 p-8 sm:p-14">
+        {/* Mobile: video as full-section background behind the text, 35% opacity */}
+        <video
+          className="absolute inset-0 h-full w-full object-cover opacity-[0.16] lg:hidden"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        >
+          <source src="/videos/history.webm" type="video/webm" />
+        </video>
+
+        <div className="relative grid gap-14 lg:grid-cols-[1.1fr_1fr] lg:items-stretch">
           <div>
             <h2 className="font-display text-3xl uppercase leading-none text-cream sm:text-4xl">
               Sobre a
@@ -32,14 +42,18 @@ export default function About() {
             </div>
           </div>
 
-          <div className="relative aspect-[4/5] w-full overflow-hidden border border-cream/10 lg:aspect-auto lg:h-full lg:self-stretch">
-            <Image
-              src="/images/history-pour.png"
-              alt="Cerveja Berger Bier sendo servida em copo com o rótulo da marca"
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 40vw, 100vw"
-            />
+          {/* Desktop: video column matching the red frame height */}
+          <div className="relative hidden overflow-hidden border border-cream/10 lg:block lg:h-full lg:self-stretch">
+            <video
+              className="absolute inset-0 h-full w-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-hidden="true"
+            >
+              <source src="/videos/history.webm" type="video/webm" />
+            </video>
           </div>
         </div>
       </div>
