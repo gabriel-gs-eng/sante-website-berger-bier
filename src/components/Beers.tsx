@@ -5,10 +5,10 @@ export default function Beers() {
     <section id="rotulos" className="bg-bark-soft px-6 py-20 sm:px-8 sm:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-2xl">
-          <p className="font-display text-sm uppercase tracking-[0.3em] text-amber-light">
+          <p className="font-eyebrow text-sm uppercase tracking-[0.3em] text-amber">
             Rótulos
           </p>
-          <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-cream sm:text-4xl">
+          <h2 className="mt-4 font-display text-3xl uppercase leading-none text-cream sm:text-4xl">
             Conheça nossos rótulos
           </h2>
           <p className="mt-4 text-cream-dark/80 sm:text-lg">
@@ -21,19 +21,19 @@ export default function Beers() {
           {beers.map((beer) => (
             <article
               key={beer.slug}
-              className="flex flex-col rounded-2xl border border-cream/10 bg-bark p-6 transition hover:border-amber/40"
+              className="flex flex-col border border-cream/10 bg-bark p-6 transition hover:border-amber/40"
             >
               <div className="flex items-start justify-between gap-3">
-                <h3 className="font-display text-xl font-semibold text-cream">
+                <h3 className="font-display text-xl uppercase text-cream">
                   {beer.name}
                 </h3>
                 {beer.featured && (
-                  <span className="rounded-full bg-amber/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-amber-light">
+                  <span className="rounded-full bg-crimson px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-cream">
                     Principal
                   </span>
                 )}
               </div>
-              <span className="mt-1 text-sm font-medium text-amber-light">
+              <span className="mt-1 text-sm font-medium text-amber">
                 {beer.abv}
               </span>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-cream-dark/80">

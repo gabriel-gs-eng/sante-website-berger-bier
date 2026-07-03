@@ -31,3 +31,5 @@ Main photo frame for hero section swapping of each 6 seconds automatically. If t
 Place static brandmark logo in the center of site header. No social icons. 
 
 Add a "Conhecer Rótulos" button on the left bottom side, above the photo swapping bar
+
+#

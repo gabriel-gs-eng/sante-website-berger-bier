@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
+/* Colors sampled directly from Docs/KV berger Bier.pdf (brand key visual) */
 :root {
-  --color-cream: #f6ecd9;
-  --color-cream-dark: #ead9b8;
-  --color-bark: #1c130c;
-  --color-bark-soft: #2b1c10;
-  --color-amber: #d99a2b;
-  --color-amber-light: #f0b93f;
-  --color-amber-dark: #a86b1c;
-  --color-garnet: #7a2020;
+  --color-cream: #efe4cf;
+  --color-cream-dark: #d9c7a0;
+  --color-bark: #151414;
+  --color-bark-soft: #35231a;
+  --color-amber: #b27619;
+  --color-amber-light: #d69a35;
+  --color-amber-dark: #bc671b;
+  --color-garnet: #7a1426;
+  --color-crimson: #be1b39;
 }
 
 @theme inline {
@@ -20,8 +22,10 @@
   --color-amber-light: var(--color-amber-light);
   --color-amber-dark: var(--color-amber-dark);
   --color-garnet: var(--color-garnet);
-  --font-display: var(--font-fraunces);
-  --font-sans: var(--font-inter);
+  --color-crimson: var(--color-crimson);
+  --font-display: var(--font-anton);
+  --font-eyebrow: var(--font-economica);
+  --font-sans: var(--font-cabin);
 }
 
 html {

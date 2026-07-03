@@ -4,10 +4,10 @@ export default function Pairings() {
   return (
     <section id="harmonizacoes" className="bg-bark px-6 py-20 sm:px-8 sm:py-28">
       <div className="mx-auto max-w-6xl">
-        <p className="font-display text-sm uppercase tracking-[0.3em] text-amber-light">
+        <p className="font-eyebrow text-sm uppercase tracking-[0.3em] text-amber">
           Harmonizações
         </p>
-        <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-cream sm:text-4xl">
+        <h2 className="mt-4 font-display text-3xl uppercase leading-none text-cream sm:text-4xl">
           Combinações sugeridas
         </h2>
 
@@ -17,10 +17,10 @@ export default function Pairings() {
               key={pair.dish}
               className="rounded-2xl border border-cream/10 bg-bark-soft/60 p-6"
             >
-              <h3 className="font-display text-base font-semibold text-cream">
+              <h3 className="font-display text-base uppercase text-cream">
                 {pair.dish}
               </h3>
-              <p className="mt-3 text-sm text-amber-light">{pair.beers.join(" • ")}</p>
+              <p className="mt-3 text-sm text-amber">{pair.beers.join(" • ")}</p>
             </div>
           ))}
         </div>

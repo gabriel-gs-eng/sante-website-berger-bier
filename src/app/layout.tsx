@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Anton, Cabin, Economica } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+// Anton stands in for "Future Friends" (the brand's display face in the KV
+// deck) — same heavy, condensed poster-grotesque silhouette.
+const anton = Anton({
+  variable: "--font-anton",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "900"],
+  weight: "400",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const economica = Economica({
+  variable: "--font-economica",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const cabin = Cabin({
+  variable: "--font-cabin",
   subsets: ["latin"],
 });
 
@@ -27,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
+      className={`${anton.variable} ${economica.variable} ${cabin.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-bark text-cream">
         {children}
