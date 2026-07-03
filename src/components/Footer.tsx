@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FacebookIcon, GoogleIcon, InstagramIcon } from "./icons";
 
 const SOCIAL_LINKS = [
@@ -11,9 +12,13 @@ export default function Footer() {
     <footer className="border-t border-cream/10 bg-bark px-6 py-12 sm:px-8">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <span className="font-display text-lg uppercase text-cream">
-            Berger<span className="text-amber">Bier</span>
-          </span>
+          <Image
+            src="/brand/logo.webp"
+            alt="Berger Bier"
+            width={317}
+            height={175}
+            className="h-14 w-auto"
+          />
           <p className="mt-2 max-w-sm text-sm text-cream-dark/70">
             Cultura cervejeira desde 2007, com raízes familiares que remontam a 1872.
           </p>

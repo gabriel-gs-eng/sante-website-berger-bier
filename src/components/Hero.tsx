@@ -12,6 +12,16 @@ const SLIDES = [
     alt: "Produção artesanal Berger Bier na cervejaria",
   },
   {
+    desktop: "/hero/desktop_carousel_4.png",
+    mobile: "/hero/mobile_carousel_4.png",
+    alt: "Barris e rótulos Berger Bier na cervejaria",
+  },
+  {
+    desktop: "/hero/desktop_carousel_5.png",
+    mobile: "/hero/mobile_carousel_5.png",
+    alt: "Berger Bier",
+  },
+  {
     desktop: "/hero/desktop_carousel_2.png",
     mobile: "/hero/mobile_carousel_2.png",
     alt: "Tanques de fermentação da Berger Bier",
@@ -20,11 +30,6 @@ const SLIDES = [
     desktop: "/hero/desktop_carousel_3.png",
     mobile: "/hero/mobile_carousel_3.png",
     alt: "Equipe Berger Bier trabalhando na produção",
-  },
-  {
-    desktop: "/hero/desktop_carousel_4.png",
-    mobile: "/hero/mobile_carousel_4.png",
-    alt: "Barris e rótulos Berger Bier na cervejaria",
   },
 ];
 
@@ -68,12 +73,12 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex min-h-[100svh] w-full flex-col overflow-hidden bg-bark">
-      <div
-        className="absolute inset-0"
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
-      >
+    <section
+      className="relative flex min-h-[100svh] w-full flex-col overflow-hidden bg-bark"
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
+    >
+      <div className="absolute inset-0">
         {SLIDES.map((slide, i) => (
           <div
             key={slide.desktop}

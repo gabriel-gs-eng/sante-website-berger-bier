@@ -2,7 +2,6 @@ import AgeGate from "@/components/AgeGate";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
 import About from "@/components/About";
-import Beers from "@/components/Beers";
 import Pairings from "@/components/Pairings";
 import Distribution from "@/components/Distribution";
 import Footer from "@/components/Footer";
@@ -15,7 +14,6 @@ export default function Home() {
         <Hero />
         <Products />
         <About />
-        <Beers />
         <Pairings />
         <Distribution />
       </main>

@@ -1,4 +1,5 @@
 import { distributionCities, featuredVenues } from "@/data/beers";
+import { WhatsAppIcon } from "./icons";
 
 export default function Distribution() {
   return (
@@ -46,6 +47,18 @@ export default function Distribution() {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="mx-auto mt-14 flex max-w-6xl justify-center">
+        <a
+          href="https://wa.me/5527999322356"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-4 py-1.5 text-[10px] font-semibold uppercase tracking-wide text-white transition hover:bg-[#1EBE5A]"
+        >
+          <WhatsAppIcon className="h-3.5 w-3.5" />
+          Encontrar em contato
+        </a>
       </div>
     </section>
   );

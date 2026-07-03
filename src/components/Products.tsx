@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { beers } from "@/data/beers";
-import { BeerGlassIcon, ChevronIcon } from "./icons";
+import { ChevronIcon } from "./icons";
 
 export default function Products() {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -20,7 +21,7 @@ export default function Products() {
   };
 
   return (
-    <section className="bg-bark px-6 py-20 sm:px-8 sm:py-28">
+    <section id="rotulos" className="bg-bark px-6 py-20 sm:px-8 sm:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="flex items-end justify-between gap-6">
           <div className="max-w-2xl">
@@ -60,13 +61,30 @@ export default function Products() {
             <article
               key={beer.slug}
               data-card
-              className="flex w-64 shrink-0 snap-center flex-col items-center border border-cream/10 bg-bark-soft/60 px-6 py-8 text-center sm:w-72"
+              className="relative flex h-[420px] w-64 shrink-0 snap-center flex-col justify-between overflow-hidden border border-cream/10 bg-bark-soft text-center sm:w-72"
             >
-              <h3 className="font-display text-xl uppercase text-cream">{beer.name}</h3>
-              <BeerGlassIcon className="mt-5 h-12 w-12 text-amber" />
-              <p className="mt-5 text-sm leading-relaxed text-cream-dark/80">
-                {beer.description}
-              </p>
+              <Image
+                src="/products/placeholder.png"
+                alt=""
+                fill
+                aria-hidden
+                className="object-cover"
+              />
+              {/* Title block: dims the image to 20% down to the top of the clear strip.
+                  Uses explicit rgba (not bg-bark/80) — Tailwind v4 compiles the /80
+                  modifier to oklab() with alpha, which older mobile Safari can't parse
+                  and drops, leaving the block transparent. */}
+              <div className="relative bg-[rgba(21,20,20,0.8)] px-6 pb-5 pt-8">
+                <h3 className="font-display text-xl uppercase text-cream">
+                  {beer.name}
+                </h3>
+              </div>
+              {/* Description block: dims the image to 20% from the bottom of the clear strip */}
+              <div className="relative bg-[rgba(21,20,20,0.8)] px-6 pb-8 pt-5">
+                <p className="text-sm leading-relaxed text-cream">
+                  {beer.description}
+                </p>
+              </div>
             </article>
           ))}
         </div>

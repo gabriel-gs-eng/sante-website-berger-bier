@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="historia" className="bg-bark px-6 py-20 sm:px-8 sm:py-28">
+    <section id="historia" className="bg-bark px-6 py-12 sm:px-8 sm:py-[4.2rem]">
       <div className="relative mx-auto max-w-6xl overflow-hidden border border-crimson/60 p-8 sm:p-14">
         {/* Mobile: video as full-section background behind the text, 35% opacity */}
         <video
