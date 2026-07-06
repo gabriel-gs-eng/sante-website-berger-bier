@@ -11,14 +11,14 @@ export default function AgeGate() {
   const [status, setStatus] = useState<Status>("checking");
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time read of a browser-only API (localStorage) on mount; there is no way to know this synchronously during SSR.
-    setStatus(window.localStorage.getItem(STORAGE_KEY) === "yes" ? "hidden" : "asking");
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time read of a browser-only API (sessionStorage) on mount; there is no way to know this synchronously during SSR.
+    setStatus(window.sessionStorage.getItem(STORAGE_KEY) === "yes" ? "hidden" : "asking");
   }, []);
 
   if (status === "checking" || status === "hidden") return null;
 
   const confirm = () => {
-    window.localStorage.setItem(STORAGE_KEY, "yes");
+    window.sessionStorage.setItem(STORAGE_KEY, "yes");
     setStatus("hidden");
   };
 
@@ -45,10 +45,10 @@ export default function AgeGate() {
             className="h-20 w-auto sm:h-24"
           />
           <div className="flex flex-col items-center gap-3">
-            <p className="font-display text-2xl uppercase text-cream sm:text-3xl">
+            <p className="font-display text-[2.25rem] uppercase text-cream sm:text-[2.8125rem]">
               Você tem mais de 18 anos?
             </p>
-            <p className="text-sm text-cream-dark/80">
+            <p className="text-[1.3125rem] text-cream-dark/80">
               Este site contém conteúdo sobre bebida alcoólica. É necessário confirmar
               sua idade para continuar.
             </p>
@@ -57,7 +57,7 @@ export default function AgeGate() {
             <button
               type="button"
               onClick={confirm}
-              className="flex-1 rounded-full bg-crimson px-8 py-3 font-semibold uppercase tracking-wide text-cream transition hover:bg-garnet sm:flex-none sm:px-10"
+              className="flex-1 rounded-full bg-amber px-8 py-3 font-semibold uppercase tracking-wide text-cream transition hover:bg-amber-dark sm:flex-none sm:px-10"
             >
               Sim
             </button>

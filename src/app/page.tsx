@@ -5,6 +5,7 @@ import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
 import CommunityStrip from "@/components/CommunityStrip";
 import Distribution from "@/components/Distribution";
+import SellWithUs from "@/components/SellWithUs";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <Testimonials />
         <CommunityStrip />
         <Distribution />
+        <SellWithUs />
       </main>
       <Footer />
     </>

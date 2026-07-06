@@ -37,7 +37,8 @@ export default function RotulosPage() {
             return (
               <article
                 key={beer.slug}
-                className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-16"
+                id={beer.slug}
+                className="grid scroll-mt-32 gap-8 lg:grid-cols-2 lg:items-center lg:gap-16 lg:scroll-mt-40"
               >
                 {/* Product picture — alternates side on desktop */}
                 <div
@@ -46,7 +47,7 @@ export default function RotulosPage() {
                   }`}
                 >
                   <Image
-                    src="/products/placeholder.png"
+                    src={beer.image}
                     alt={`Cerveja ${beer.name} da Berger Bier`}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"

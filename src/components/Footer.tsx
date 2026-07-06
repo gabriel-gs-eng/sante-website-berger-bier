@@ -1,10 +1,21 @@
 import Image from "next/image";
-import { FacebookIcon, GoogleIcon, InstagramIcon } from "./icons";
 
 const SOCIAL_LINKS = [
-  { label: "Instagram", href: "https://instagram.com", Icon: InstagramIcon },
-  { label: "Facebook", href: "https://facebook.com", Icon: FacebookIcon },
-  { label: "Google", href: "https://google.com", Icon: GoogleIcon },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/cervejariabergerbier/",
+    icon: "/icons/instagram.svg",
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/cervejariabergerbier/?locale=gl_ES",
+    icon: "/icons/facebook.svg",
+  },
+  {
+    label: "Google",
+    href: "https://www.google.com/maps/place/Cervejaria+Bergerbier/data=!4m2!3m1!1s0x0:0x7f09409ff8c93803?sa=X&ved=1t:2428&ictx=111",
+    icon: "/icons/google.svg",
+  },
 ];
 
 export default function Footer() {
@@ -25,16 +36,16 @@ export default function Footer() {
         </div>
 
         <nav aria-label="Redes sociais" className="flex items-center gap-4">
-          {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+          {SOCIAL_LINKS.map(({ label, href, icon }) => (
             <a
               key={label}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-cream/20 text-cream transition hover:border-amber-light hover:text-amber-light"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-cream/30 bg-white transition hover:scale-105 hover:border-amber-light"
             >
-              <Icon className="h-4 w-4" />
+              <Image src={icon} alt="" aria-hidden="true" width={20} height={20} className="h-5 w-5" />
             </a>
           ))}
         </nav>

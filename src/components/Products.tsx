@@ -58,13 +58,15 @@ export default function Products() {
           className="no-scrollbar mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-[calc(50%-8rem)] pb-2 sm:px-0"
         >
           {beers.map((beer) => (
-            <article
+            <Link
               key={beer.slug}
+              href={`/rotulos#${beer.slug}`}
               data-card
-              className="relative flex h-[420px] w-64 shrink-0 snap-center flex-col justify-between overflow-hidden border border-cream/10 bg-bark-soft text-center sm:w-72"
+              aria-label={`Ver rótulo ${beer.name}`}
+              className="group relative flex h-[420px] w-64 shrink-0 snap-center flex-col justify-between overflow-hidden border border-cream/10 bg-bark-soft text-center transition hover:border-amber-light sm:w-72"
             >
               <Image
-                src="/products/placeholder.png"
+                src={beer.image}
                 alt=""
                 fill
                 aria-hidden
@@ -85,7 +87,7 @@ export default function Products() {
                   {beer.description}
                 </p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
 
