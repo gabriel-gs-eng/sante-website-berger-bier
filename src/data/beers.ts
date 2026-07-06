@@ -112,3 +112,46 @@ export const featuredVenues = [
   { name: "Espetinho do Joacim", city: "Santa Maria de Jetibá" },
   { name: "Costelitos", city: "Santa Teresa" },
 ];
+
+export type Testimonial = {
+  name: string;
+  role: string;
+  image: string;
+  rating: number;
+  comment: string;
+};
+
+// Depoimentos extraídos do site original (carrossel de depoimentos).
+export const testimonials: Testimonial[] = [
+  {
+    name: "Ronaldo Bourguignon",
+    role: "Baixista da Rising Rock",
+    image: "/testimonials/tst-image1.jpg",
+    rating: 5,
+    comment:
+      "Ingredientes de alta qualidade, respeito aos seus apreciadores e paixão pelo que se faz!",
+  },
+  {
+    name: "Leandro Netto",
+    role: "CEO/Founder na Wolfgard Meadery - Hidroméis",
+    image: "/testimonials/tst-image2.jpg",
+    rating: 5,
+    comment: "Bergerbier, capixaba com alma e qualidade alemã!",
+  },
+  {
+    name: "Fabrício Sant'Anna Maduro",
+    role: "Analista de Sistemas",
+    image: "/testimonials/tst-image3.jpg",
+    rating: 5,
+    comment:
+      "Cerveja de altíssima qualidade. Cor, aroma e sabor único. Um leque de cervejas perfeito!",
+  },
+  {
+    name: "Andrio",
+    role: "Vendedor",
+    image: "/testimonials/tst-image4.jpg",
+    rating: 4,
+    comment:
+      "Excelente cerveja, encorpada e única. Não falta em meu estabelecimento!",
+  },
+];

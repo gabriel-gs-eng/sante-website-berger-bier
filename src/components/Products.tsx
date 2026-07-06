@@ -55,7 +55,7 @@ export default function Products() {
 
         <div
           ref={scrollerRef}
-          className="no-scrollbar mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-2"
+          className="no-scrollbar mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-[calc(50%-8rem)] pb-2 sm:px-0"
         >
           {beers.map((beer) => (
             <article

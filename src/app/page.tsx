@@ -2,7 +2,8 @@ import AgeGate from "@/components/AgeGate";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
 import About from "@/components/About";
-import Pairings from "@/components/Pairings";
+import Testimonials from "@/components/Testimonials";
+import CommunityStrip from "@/components/CommunityStrip";
 import Distribution from "@/components/Distribution";
 import Footer from "@/components/Footer";
 
@@ -14,7 +15,8 @@ export default function Home() {
         <Hero />
         <Products />
         <About />
-        <Pairings />
+        <Testimonials />
+        <CommunityStrip />
         <Distribution />
       </main>
       <Footer />

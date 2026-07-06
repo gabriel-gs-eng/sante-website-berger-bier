@@ -72,6 +72,14 @@ export function WhatsAppIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
+export function StarIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M12 2.5l2.9 5.88 6.49.94-4.7 4.58 1.11 6.46L12 17.82 6.2 20.36l1.11-6.46-4.7-4.58 6.49-.94L12 2.5Z" />
+    </svg>
+  );
+}
+
 export function GoogleIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
